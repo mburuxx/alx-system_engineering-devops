@@ -10,7 +10,7 @@ The specific list of projects contained follows:
 <a href="https://github.com/mburuxx/alx-system_engineering-devops/tree/master/0x01-shell_permissions"> 0x01 - Shell, permissions </a>
 </li>
 <li>
-<a href="https://github.com/mburuxx/alx-system_engineering-devops/tree/master/0x02-shell_redirections"> 0x02 - Shell, I/O redirections and Filters </a>
+<a href="https://github.com/mburuxx/alx-system_engineering-devops/tree/master/0x02-shell_redirections"> 0x02 - Shell, I/O redirections and filters </a>
 </li>
 <li>
 <a href="https://github.com/mburuxx/alx-system_engineering-devops/tree/master/0x03-shell_variables_expansions"> 0x03 - Shell, innit files, variables and expansions </a>
