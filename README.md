@@ -7,3 +7,10 @@ This repository contains programs written for the system engineering and DevOps 
 * [0x03-shell_variables_expansions](0x03-shell_variables_expansions)
 * [0x04-loops_conditions_and_parsing](0x04-loops_conditions_and_parsing)
 * [0x05-processes_and_signals](0x05-processes_and_signals)
+
+
+## Author :black_nib:
+* <b>John Mburu (X)</b>
+
+# Acknowledgements :pray:
+These works are part of the ALX SE curriculum. ALX is a program that prepares young people with the technical and work-ready skills for a global career as a Full-Stack Developer using project-based peer learning. For more information, follow this <a href="https://www.alxafrica.com/software-engineering-2022/"> link</a>.
