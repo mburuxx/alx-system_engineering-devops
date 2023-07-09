@@ -12,6 +12,7 @@ This repository contains programs written for the system engineering and DevOps 
 * [0x08-networking_basics_2](0x08-networking_basics_2)
 * [0x0A-configuration_management](0x0A-configuration_management)
 * [0x0B-ssh](0x0B-ssh)
+* [0x0C-web_server](0x0C-web_server)
 
 
 ## Author :black_nib:
