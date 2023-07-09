@@ -10,6 +10,8 @@ This repository contains programs written for the system engineering and DevOps 
 * [0x06-regular_expressions](0x06-regular_expressions)
 * [0x07-networking_basics](0x07-networking_basics)
 * [0x08-networking_basics_2](0x08-networking_basics_2)
+* [0x0A-configuration_management](0x0A-configuration_management)
+* [0x0B-ssh](0x0B-ssh)
 
 
 ## Author :black_nib:
