@@ -7,27 +7,16 @@ import sys
 
 
 def number_of_subscribers(subreddit):
-    # Set a custom User-Agent to avoid "Too Many Requests" error
-    headers = {"User-Agent": "/u/ledbag123 API Python for Holberton School"}
-    
-    try:
-        # Construct the URL for the subreddit API
-        url = f"https://www.reddit.com/r/{subreddit}/about.json"
-        
-        # Send a GET request to the API
-        response = requests.get(url, headers=headers, allow_redirects=False)
-        
-        # Check if the response is successful (status code 200)
-        if response.status_code == 200:
-            # Parse the JSON response
-            data = response.json()
-            
-            # Extract and return the number of subscribers
-            return data["data"]["subscribers"]
-        else:
-            # If the subreddit is invalid or any other error occurs, return 0
-            return 0
-    except Exception as e:
-        # Return 0 if an exception occurs
-        print(f"An error occurred: {e}")
-        return 0
+    """Read reddit API and return number subscribers """
+    username = 'ledbag123'
+    password = 'Reddit72'
+    user_pass_dict = {'user': username, 'passwd': password, 'api_type': 'json'}
+    headers = {'user-agent': '/u/ledbag123 API Python for Holberton School'}
+    url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
+    client = requests.session()
+    client.headers = headers
+    r = client.get(url, allow_redirects=False)
+    if r.status_code == 200:
+        return (r.json()["data"]["subscribers"])
+    else:
+        return(0)
