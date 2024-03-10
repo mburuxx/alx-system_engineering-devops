@@ -1,35 +1,30 @@
-**Issue Summary:**
+# Post-Mortem 
 
-The outage occurred from March 10th, 2:00 AM to March 10th, 4:30 AM (UTC). The primary impact was on the availability of the website's login functionality, resulting in users being unable to log in to their accounts. Approximately 30% of users attempting to log in during this time were affected.
-The root cause of the outage was identified as a misconfiguration in the Apache server, leading to internal server errors (HTTP 500).
+## Issue Summary:
 
-**Timeline:**
+This is the thrilling saga of the Apache server misconfiguration that rocked our digital world from March 10th, 2:00 AM to March 10th, 4:30 AM (UTC). Picture this: users frantically trying to log in, met with the dreaded HTTP 500 error, akin to hitting a brick wall in the digital highway. Approximately 30% of users found themselves stranded in login limbo, wondering if they'd ever regain access to their beloved accounts. The culprit? A misconfiguration in our trusty Apache server, turning our website into a digital labyrinth of confusion.
 
-- **2:00 AM (UTC):** Issue detected by automated monitoring systems, indicating a spike in internal server errors.
-- **2:05 AM:** Engineers received alerts and began investigating the issue.
-- **2:15 AM:** Initial investigation focused on server logs and configuration files to identify potential causes.
-- **2:30 AM:** Engineers discovered a pattern of failed requests related to a particular Apache module.
-- **3:00 AM:** Misleading investigation path pursued, initially attributing the issue to recent software updates.
-- **3:45 AM:** After further analysis, engineers escalated the incident to the systems administration team for additional assistance.
-- **4:15 AM:** Root cause identified as a misconfiguration in the Apache server related to PHP extensions.
-- **4:30 AM:** Incident resolved by correcting the misconfiguration and restarting the Apache server.
+## Timeline:
 
-**Root Cause and Resolution:**
+- **2:00 AM (UTC):** Our adventure begins with a sudden surge in internal server errors, detected by our vigilant automated monitoring systems. Little did we know, a storm was brewing in the digital skies.
+- **2:05 AM:** Engineers sprang into action like knights on a quest, armed with alerts and determination to vanquish the impending doom.
+- **2:15 AM:** Our brave engineers delved into the depths of server logs and configuration files, hoping to uncover the elusive source of our troubles.
+- **2:30 AM:** A breakthrough! Engineers stumbled upon a trail of failed requests, leading them to suspect a mischievous misconfiguration lurking within our Apache fortress.
+- **3:00 AM:** Alas, our heroes took a wrong turn on the path of investigation, initially blaming recent software updates for the chaos. Oh, the folly of haste!
+- **3:45 AM:** With resolve undeterred, our engineers sought aid from the wise sages of the systems administration team, hoping for enlightenment in our darkest hour.
+- **4:15 AM:** Eureka! The root cause revealed itself—a misconfiguration in the Apache server's PHP extensions, a digital dragon hiding in plain sight.
+- **4:30 AM:** Victory was ours! With the misconfiguration banished and the Apache server reborn, our website emerged from the shadows, ready to welcome users once more.
 
-- **Root Cause:** The issue stemmed from a misconfiguration in the Apache server, specifically related to PHP extensions.
-- **Resolution:** The misconfiguration was corrected by updating the Puppet configuration to ensure that the correct PHP extensions were configured in the Apache server. This involved modifying the `0-strace_is_your_friend.pp` Puppet manifest to automate the fix.
+## Root Cause and Resolution:
 
-**Corrective and Preventative Measures:**
+In the heart of our Apache fortress lay the root cause of our woes: a misconfiguration in the PHP extensions. But fear not, for our valiant engineers wielded their Puppet magic, updating the configuration with precision and grace. The `0-strace_is_your_friend.pp` Puppet manifest was our trusty sword, automating the fix and restoring order to our digital realm.
 
-- **Improvements/Fixes:**
-  - Implement stricter configuration management processes to prevent misconfigurations in production environments.
-  - Enhance monitoring capabilities to detect similar issues more rapidly in the future.
+## Corrective and Preventative Measures:
 
-- **Tasks to Address the Issue:**
-  - Update Puppet manifest (`0-strace_is_your_friend.pp`) to include correct PHP extensions configuration.
-  - Conduct a thorough review of Apache server configurations to identify any other potential misconfigurations.
-  - Enhance incident response procedures to streamline the escalation process and improve collaboration between teams.
-  - Implement automated testing for server configurations to catch potential issues before they impact production environments.
- 
-  
-In conclusion, the outage on March 10th was caused by a misconfiguration in the Apache server, resulting in internal server errors and impacting the website's login functionality. The issue was promptly detected and resolved through collaborative investigation and corrective actions, including updating the Puppet configuration to automate the fix and prevent similar incidents in the future.
+But our adventure does not end here! To fortify our defenses against future misconfigurations, we embark on a quest for improvement:
+- Strengthening our configuration management processes, turning chaos into order with the wave of a digital wand.
+- Enhancing our monitoring capabilities, keeping vigilant watch over our digital kingdom to thwart any lurking threats.
+- Updating the Puppet manifest to include correct PHP extensions configuration, ensuring our Apache fortress remains impenetrable.
+- Conducting a thorough review of Apache server configurations, seeking out hidden vulnerabilities like treasure in the digital sands.
+
+In conclusion, dear reader, our Apache adventure serves as a testament to the resilience of our digital kingdom. Through collaboration, determination, and perhaps a touch of magic, we triumphed over adversity and emerged stronger than ever before. So, let us raise our virtual banners high and march forth into the future, ready to face whatever challenges may come our way!
