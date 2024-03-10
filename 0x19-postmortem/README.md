@@ -25,4 +25,11 @@ The root cause of the outage was identified as a misconfiguration in the Apache 
   - Implement stricter configuration management processes to prevent misconfigurations in production environments.
   - Enhance monitoring capabilities to detect similar issues more rapidly in the future.
 
+- **Tasks to Address the Issue:**
+  - Update Puppet manifest (`0-strace_is_your_friend.pp`) to include correct PHP extensions configuration.
+  - Conduct a thorough review of Apache server configurations to identify any other potential misconfigurations.
+  - Enhance incident response procedures to streamline the escalation process and improve collaboration between teams.
+  - Implement automated testing for server configurations to catch potential issues before they impact production environments.
+ 
+  
 In conclusion, the outage on March 10th was caused by a misconfiguration in the Apache server, resulting in internal server errors and impacting the website's login functionality. The issue was promptly detected and resolved through collaborative investigation and corrective actions, including updating the Puppet configuration to automate the fix and prevent similar incidents in the future.
